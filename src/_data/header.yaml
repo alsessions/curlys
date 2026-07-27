@@ -9,9 +9,6 @@ navigation:
   - label: Contact
     url: /contact/
 
-# Show search icon in header
-show_search: true
-
 # Call to action button
 cta:
   label: View Menu
