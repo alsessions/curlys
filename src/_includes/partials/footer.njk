@@ -1,11 +1,11 @@
 {# Site Footer #}
 
-<footer class="bg-zinc-900 text-zinc-400 hc:bg-white hc:text-zinc-700 py-12 md:py-16">
+<footer class="bg-zinc-900 text-zinc-400 py-12 md:py-16">
   <div class="container">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
       {# Brand column #}
       <div class="md:col-span-2">
-        <a href="/" class="inline-flex items-center gap-2 text-xl font-bold text-white hc:text-zinc-900 no-underline hover:text-primary-400">
+        <a href="/" class="inline-flex items-center gap-2 text-xl font-bold text-white no-underline hover:text-primary-400">
           <img src="/favicon.svg" alt="" width="32" height="32" class="w-8 h-8" loading="lazy" eleventy:ignore>
           <span>{{ metadata.title | default("Electric Lime") }}</span>
         </a>
@@ -20,7 +20,7 @@
             {% for social in socials %}
               <a
                 href="{{ social.url }}"
-                class="text-zinc-400 hc:text-zinc-700 hover:text-white hc:hover:text-primary-700 transition-colors"
+                class="text-zinc-400 hover:text-white transition-colors"
                 aria-label="{{ social.label }}"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -43,7 +43,7 @@
       {# Navigation columns #}
       {% for column in footer.columns %}
         <div>
-          <h3 class="text-sm font-semibold text-white hc:text-zinc-900 uppercase tracking-wider mb-4">
+          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">
             {{ column.title }}
           </h3>
           <ul class="space-y-3">
@@ -51,7 +51,7 @@
               <li>
                 <a
                   href="{{ link.url }}"
-                  class="text-sm text-zinc-400 hc:text-zinc-700 hover:text-white hc:hover:text-primary-700 transition-colors no-underline hc:underline"
+                  class="text-sm text-zinc-400 hover:text-white transition-colors no-underline"
                   {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}
                 >
                   {{ link.label }}
@@ -64,7 +64,7 @@
     </div>
 
     {# Bottom bar #}
-    <div class="mt-12 pt-8 border-t border-zinc-800 hc:border-zinc-300">
+    <div class="mt-12 pt-8 border-t border-zinc-800">
       <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
         <p class="text-sm">
           &copy; {% year %} {{ metadata.title | default("Electric Lime") }}. All rights reserved.
@@ -75,18 +75,13 @@
             {% for link in footer.legal %}
               <a
                 href="{{ link.url }}"
-                class="text-sm text-zinc-400 hc:text-zinc-700 hover:text-white hc:hover:text-primary-700 transition-colors no-underline hc:underline"
+                class="text-sm text-zinc-400 hover:text-white transition-colors no-underline"
               >
                 {{ link.label }}
               </a>
             {% endfor %}
           </div>
         {% endif %}
-      </div>
-
-      {# High Contrast Toggle #}
-      <div class="mt-6 flex justify-center sm:justify-start">
-        <contrast-toggle></contrast-toggle>
       </div>
     </div>
   </div>

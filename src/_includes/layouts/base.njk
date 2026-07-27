@@ -4,14 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {# High contrast initialization - runs before content loads to prevent flash #}
   <script>
     (function(){
       document.documentElement.classList.remove('no-js');
-      const h = localStorage.getItem("highContrast");
-      const c = h !== null ? h === "true" : window.matchMedia("(prefers-contrast: more)").matches;
-      if (h === null) localStorage.setItem("highContrast", c);
-      if (c) document.documentElement.classList.add("high-contrast");
     })();
   </script>
 

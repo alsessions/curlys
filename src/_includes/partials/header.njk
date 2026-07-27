@@ -1,7 +1,7 @@
 {# Site Header with Navigation #}
 {% from "_components/index.njk" import button %}
 
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-zinc-200 hc:border-zinc-400" x-data="{ mobileMenuOpen: false }">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-zinc-200" x-data="{ mobileMenuOpen: false }">
   <div class="container">
     <nav class="flex items-center justify-between h-16 md:h-20">
       {# Brand #}
@@ -16,7 +16,7 @@
         {% for item in header.navigation %}
           <a
             href="{{ item.url }}"
-            class="nav-link text-sm font-medium text-zinc-600 hover:text-primary-700 transition-colors no-underline hc:text-zinc-800 hc:hover:text-primary-800 hc:hover:underline{% if page.url == item.url %} text-primary-700 hc:text-primary-800{% endif %}"
+            class="nav-link text-sm font-medium text-zinc-600 hover:text-primary-700 transition-colors no-underline if page.url == item.url %} text-primary-700 endif %}"
           >
             {{ item.label }}
           </a>
@@ -27,7 +27,7 @@
       <div class="flex items-center justify-end gap-3 flex-1">
         {# Search icon #}
         {% if header.show_search %}
-        <a href="/search/" class="p-2 text-zinc-600 hover:text-primary-700 transition-colors hc:text-zinc-800" aria-label="Search">
+        <a href="/search/" class="p-2 text-zinc-600 hover:text-primary-700 transition-colors" aria-label="Search">
           {% phosphor "magnifying-glass", "bold", { size: 20 } %}
         </a>
         {% endif %}
@@ -48,7 +48,7 @@
         <button
           type="button"
           @click="mobileMenuOpen = !mobileMenuOpen"
-          class="md:hidden p-2 text-zinc-600 hover:text-zinc-900 hc:text-zinc-800"
+          class="md:hidden p-2 text-zinc-600 hover:text-zinc-900"
           :aria-expanded="mobileMenuOpen"
           aria-label="Toggle navigation menu"
         >
@@ -63,14 +63,14 @@
       x-show="mobileMenuOpen"
       x-cloak
       x-collapse
-      class="md:hidden border-t border-zinc-200 hc:border-zinc-400"
+      class="md:hidden border-t border-zinc-200"
     >
       <div class="py-4 space-y-2">
         {% for item in header.navigation %}
           <a
             href="{{ item.url }}"
             @click="mobileMenuOpen = false"
-            class="block px-4 py-2 text-base font-medium text-zinc-600 hover:text-primary-700 hover:bg-zinc-50 rounded-lg no-underline hc:text-zinc-800 hc:hover:text-primary-800{% if page.url == item.url %} text-primary-700 bg-primary-50 hc:text-primary-800{% endif %}"
+            class="block px-4 py-2 text-base font-medium text-zinc-600 hover:text-primary-700 hover:bg-zinc-50 rounded-lg no-underline if page.url == item.url %} text-primary-700 bg-primary-50 endif %}"
           >
             {{ item.label }}
           </a>
