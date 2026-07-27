@@ -30,7 +30,7 @@
 {% endif %}
 
 {# Open Graph #}
-<meta property="og:type" content="{% if layout == 'layouts/post.njk' %}article{% else %}website{% endif %}">
+<meta property="og:type" content="website">
 <meta property="og:title" content="{{ pageTitle }}">
 <meta property="og:description" content="{{ pageDescription | striptags | truncate(160) }}">
 <meta property="og:url" content="{{ pageUrl }}">
@@ -49,21 +49,6 @@
 {% endif %}
 {% if metadata.twitter %}
   <meta name="twitter:site" content="{{ metadata.twitter }}">
-{% endif %}
-
-{# Article specific (for blog posts) #}
-{% if layout == 'layouts/post.njk' %}
-  <meta property="article:published_time" content="{{ date | dateToISOString }}">
-  {% if author %}
-    <meta property="article:author" content="{{ author }}">
-  {% endif %}
-  {% if tags %}
-    {% for tag in tags %}
-      {% if tag !== "blog" %}
-        <meta property="article:tag" content="{{ tag }}">
-      {% endif %}
-    {% endfor %}
-  {% endif %}
 {% endif %}
 
 {# Favicon by https://realfavicongenerator.net #}

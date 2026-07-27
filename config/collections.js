@@ -3,16 +3,6 @@
  * @param {import('@11ty/eleventy').UserConfig} eleventyConfig
  */
 export default function (eleventyConfig) {
-  // Blog posts collection
-  eleventyConfig.addCollection("blog", (collectionApi) => {
-    return collectionApi.getFilteredByGlob("src/blog/*.md").sort((a, b) => b.date - a.date);
-  });
-
-  // Authors collection
-  eleventyConfig.addCollection("authors", (collectionApi) => {
-    return collectionApi.getFilteredByGlob("src/authors/*.md");
-  });
-
   // Pages collection
   eleventyConfig.addCollection("pages", (collectionApi) => {
     return collectionApi

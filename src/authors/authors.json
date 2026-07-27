@@ -1,7 +1,0 @@
-{
-  "layout": "layouts/author.njk",
-  "tags": ["authors"],
-  "eleventyComputed": {
-    "permalink": "/authors/{{ slug or page.fileSlug }}/"
-  }
-}

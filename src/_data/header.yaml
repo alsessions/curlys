@@ -4,8 +4,8 @@ navigation:
     url: /
   - label: About
     url: /about/
-  - label: Blog
-    url: /blog/
+  - label: Menu
+    url: /menu/
   - label: Contact
     url: /contact/
 
@@ -14,5 +14,5 @@ show_search: true
 
 # Call to action button
 cta:
-  label: Get Started
-  url: /contact/
+  label: View Menu
+  url: /menu/

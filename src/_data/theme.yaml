@@ -2,4 +2,4 @@
 # These settings control visual and feature toggles for the starter
 
 # Show "Fork me on GitHub" ribbon in the corner
-show_github_ribbon: true
+show_github_ribbon: false

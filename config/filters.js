@@ -47,19 +47,6 @@ export default function (eleventyConfig) {
     return array?.slice(0, limit) || [];
   });
 
-  // Get author data by slug
-  // Usage: author | getAuthor(collections.authors)
-  eleventyConfig.addFilter("getAuthor", (slug, authors) => {
-    if (!authors || !slug) return null;
-    return authors.find((author) => author.data?.slug === slug || author.page?.fileSlug === slug);
-  });
-
-  // Get posts by author slug
-  // Usage: slug | getPostsByAuthor(collections.blog)
-  eleventyConfig.addFilter("getPostsByAuthor", (authorSlug, posts) => {
-    return posts?.filter((post) => post.data.author === authorSlug) || [];
-  });
-
   // Slugify text
   eleventyConfig.addFilter("slugify", (text) => {
     return text
