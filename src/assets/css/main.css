@@ -5,18 +5,112 @@
 
 /* Theme configuration */
 @theme {
-  /* Primary: Electric Lime - WCAG AA compliant palette */
-  --color-primary-50: oklch(0.986 0.031 120.757);
-  --color-primary-100: oklch(0.967 0.067 122.328);
-  --color-primary-200: oklch(0.938 0.127 124.321);
-  --color-primary-300: oklch(0.897 0.196 126.665);
-  --color-primary-400: oklch(0.841 0.238 128.85);
-  --color-primary-500: oklch(0.768 0.233 130.85);
-  --color-primary-600: oklch(0.648 0.2 131.684);
-  --color-primary-700: oklch(0.532 0.157 131.589);
-  --color-primary-800: oklch(0.453 0.124 130.933);
-  --color-primary-900: oklch(0.405 0.101 131.063);
-  --color-primary-950: oklch(0.274 0.072 132.109);
+  --color-black: #030303;
+  --color-white: #fffdf7;
+
+  /* Primary: cheese gold */
+  --color-primary-50: #fff9d9;
+  --color-primary-100: #ffef9b;
+  --color-primary-200: #ffe25b;
+  --color-primary-300: #ffd229;
+  --color-primary-400: #ffbf00;
+  --color-primary-500: #f4a800;
+  --color-primary-600: #d98100;
+  --color-primary-700: #aa5c00;
+  --color-primary-800: #7a3e00;
+  --color-primary-900: #4e2500;
+  --color-primary-950: #2d1300;
+
+  /* Neutral: charred near-black */
+  --color-zinc-50: #fffdf7;
+  --color-zinc-100: #f3eee5;
+  --color-zinc-200: #ddd5c9;
+  --color-zinc-300: #bdb4a7;
+  --color-zinc-400: #948b80;
+  --color-zinc-500: #756d63;
+  --color-zinc-600: #5a544d;
+  --color-zinc-700: #3f3a35;
+  --color-zinc-800: #231f1b;
+  --color-zinc-900: #11100e;
+  --color-zinc-950: #050403;
+
+  /* Flame red */
+  --color-red-50: #fff0e9;
+  --color-red-100: #ffd8c8;
+  --color-red-200: #ffad94;
+  --color-red-300: #ff765c;
+  --color-red-400: #ff3d2d;
+  --color-red-500: #f21b12;
+  --color-red-600: #d40c08;
+  --color-red-700: #a30907;
+  --color-red-800: #780b08;
+  --color-red-900: #4b0906;
+  --color-red-950: #2a0302;
+
+  /* Grill orange */
+  --color-orange-50: #fff4dc;
+  --color-orange-100: #ffe2a8;
+  --color-orange-200: #ffc767;
+  --color-orange-300: #ffa32b;
+  --color-orange-400: #fb7a0b;
+  --color-orange-500: #e45605;
+  --color-orange-600: #bd3904;
+  --color-orange-700: #902908;
+  --color-orange-800: #681f08;
+  --color-orange-900: #401305;
+  --color-orange-950: #240802;
+
+  /* Smoothie green */
+  --color-green-50: #f3ffd8;
+  --color-green-100: #e2ff9f;
+  --color-green-200: #c5f95d;
+  --color-green-300: #a2e92a;
+  --color-green-400: #81cf0b;
+  --color-green-500: #66a805;
+  --color-green-600: #4f8206;
+  --color-green-700: #3d6308;
+  --color-green-800: #2e4a08;
+  --color-green-900: #1f3105;
+  --color-green-950: #101c02;
+
+  /* Berry pink */
+  --color-pink-50: #fff0f5;
+  --color-pink-100: #ffd6e4;
+  --color-pink-200: #ffa8c4;
+  --color-pink-300: #ff6f9e;
+  --color-pink-400: #fb3c7a;
+  --color-pink-500: #e9155a;
+  --color-pink-600: #c50743;
+  --color-pink-700: #99073a;
+  --color-pink-800: #70072f;
+  --color-pink-900: #49041f;
+  --color-pink-950: #28010f;
+
+  /* Blueberry */
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bdd7ff;
+  --color-blue-300: #91bbff;
+  --color-blue-400: #5f94f7;
+  --color-blue-500: #386fe5;
+  --color-blue-600: #244fc1;
+  --color-blue-700: #1d3d99;
+  --color-blue-800: #1b3375;
+  --color-blue-900: #172a58;
+  --color-blue-950: #0c1734;
+
+  /* Toasted amber */
+  --color-amber-50: #fff8e1;
+  --color-amber-100: #ffedb3;
+  --color-amber-200: #ffdd70;
+  --color-amber-300: #ffc738;
+  --color-amber-400: #faae12;
+  --color-amber-500: #dd8b05;
+  --color-amber-600: #b96605;
+  --color-amber-700: #8d4708;
+  --color-amber-800: #663209;
+  --color-amber-900: #411f05;
+  --color-amber-950: #251002;
 
   /* Font stacks */
   --font-sans: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;

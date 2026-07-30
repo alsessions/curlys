@@ -1,11 +1,11 @@
 {# Site Header with Navigation #}
 {% from "_components/index.njk" import button %}
 
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-zinc-200" x-data="{ mobileMenuOpen: false }">
+<header class="sticky top-0 z-50 bg-zinc-950/95 backdrop-blur-sm border-b border-red-700/60" x-data="{ mobileMenuOpen: false }">
   <div class="container">
     <nav class="flex items-center justify-between h-16 md:h-20">
       {# Brand #}
-      <a href="/" class="flex items-center gap-2 text-xl font-bold text-zinc-900 no-underline hover:text-primary-700 flex-1">
+      <a href="/" class="flex items-center gap-2 text-xl font-bold text-primary-300 no-underline hover:text-primary-200 flex-1">
         <img src="/favicon.svg" alt="" width="32" height="32" class="w-8 h-8" eleventy:ignore>
         <span class="hidden sm:inline">{{ metadata.title | default("Curly's") }}</span>
         <span class="sr-only">{{ metadata.title | default("Curly's") }}</span>
@@ -16,7 +16,7 @@
         {% for item in header.navigation %}
           <a
             href="{{ item.url }}"
-            class="nav-link text-sm font-medium text-zinc-600 hover:text-primary-700 transition-colors no-underline{% if page.url == item.url %} text-primary-700{% endif %}"
+            class="nav-link text-sm font-semibold text-zinc-200 hover:text-primary-300 transition-colors no-underline{% if page.url == item.url %} text-primary-300{% endif %}"
           >
             {{ item.label }}
           </a>
@@ -41,7 +41,7 @@
         <button
           type="button"
           @click="mobileMenuOpen = !mobileMenuOpen"
-          class="md:hidden p-2 text-zinc-600 hover:text-zinc-900"
+          class="md:hidden p-2 text-zinc-100 hover:text-primary-300"
           :aria-expanded="mobileMenuOpen"
           aria-label="Toggle navigation menu"
         >
@@ -56,14 +56,14 @@
       x-show="mobileMenuOpen"
       x-cloak
       x-collapse
-      class="md:hidden border-t border-zinc-200"
+      class="md:hidden border-t border-red-700/60"
     >
       <div class="py-4 space-y-2">
         {% for item in header.navigation %}
           <a
             href="{{ item.url }}"
             @click="mobileMenuOpen = false"
-            class="block px-4 py-2 text-base font-medium text-zinc-600 hover:text-primary-700 hover:bg-zinc-50 rounded-lg no-underline{% if page.url == item.url %} text-primary-700 bg-primary-50{% endif %}"
+            class="block px-4 py-2 text-base font-semibold text-zinc-100 hover:text-primary-300 hover:bg-zinc-900 rounded-lg no-underline{% if page.url == item.url %} text-primary-300 bg-zinc-900{% endif %}"
           >
             {{ item.label }}
           </a>

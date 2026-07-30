@@ -7,39 +7,42 @@ permalink: /index.html
 {% from "_components/index.njk" import button, card, badge, accordion %}
 
 {# Hero Section #}
-<section class="section bg-gradient-to-b from-primary-50 to-white">
-  <div class="container text-center">
-    <div class="max-w-3xl mx-auto">
-
-
-      <h1 class="text-balance">
-        Curly's <span class="text-gradient">Cheese Steaks and Grill</span> 
+<section class="relative min-h-[calc(100vh-5rem)] overflow-hidden bg-zinc-950">
+  <img
+    src="/assets/images/3F10ED09-7E3F-45E5-9933-32AC2473A656.png"
+    alt=""
+    class="absolute inset-0 h-full w-full object-cover object-center opacity-55"
+    loading="eager"
+    eleventy:ignore
+  >
+  <div class="absolute inset-0 bg-gradient-to-b from-zinc-950/65 via-zinc-950/45 to-zinc-950"></div>
+  <div class="relative container flex min-h-[calc(100vh-5rem)] items-end pb-12 pt-24 md:pb-16">
+    <div class="max-w-3xl">
+      <p class="mb-3 text-sm font-bold uppercase tracking-wider text-primary-300">Rome, NY</p>
+      <h1 class="text-balance text-zinc-50 drop-shadow-lg">
+        Curly's Cheese Steaks and Grill
       </h1>
-
-      <p class="mt-6 text-xl text-zinc-600 text-pretty">
-        Philly Cheesesteaks with a New York twist.
+      <p class="mt-5 max-w-xl text-xl font-medium text-zinc-100 text-pretty drop-shadow">
+        Philly cheesesteaks with a New York twist, stacked burgers, hot fries, and fresh smoothies.
       </p>
-
-      <div class="flex flex-wrap justify-center gap-4 mt-8">
+      <div class="flex flex-wrap gap-4 mt-8">
         {{ button({
           text: "View Menu",
           url: "/menu/",
           variant: "primary",
           size: "lg"
         }) }}
-
-
       </div>
     </div>
   </div>
 </section>
 
 {# Specials Section #}
-<section class="section">
+<section class="section bg-zinc-950">
   <div class="container">
     <div class="text-center max-w-2xl mx-auto mb-12">
-      <h2>Specials</h2>
-      <p class="mt-4 text-lg text-zinc-600">
+      <h2 class="text-zinc-50">Specials</h2>
+      <p class="mt-4 text-lg text-zinc-200">
         Daily and weekly specials.
       </p>
     </div>
@@ -48,8 +51,8 @@ permalink: /index.html
       {# Special 1 #}
       <div class="card">
   
-        <h3 class="text-xl font-bold mb-2">Something</h3>
-        <p class="text-zinc-600">
+        <h3 class="text-xl font-bold mb-2 text-zinc-50">Something</h3>
+        <p class="text-zinc-200">
           A descrption of something.
         </p>
       </div>
@@ -57,8 +60,8 @@ permalink: /index.html
       {# Feature 2 #}
       <div class="card">
 
-        <h3 class="text-xl font-bold mb-2">Something Else</h3>
-        <p class="text-zinc-600">
+        <h3 class="text-xl font-bold mb-2 text-zinc-50">Something Else</h3>
+        <p class="text-zinc-200">
           A description of something else.
         </p>
       </div>
@@ -66,8 +69,8 @@ permalink: /index.html
       {# Feature 3 #}
       <div class="card">
        
-        <h3 class="text-xl font-bold mb-2">One More</h3>
-        <p class="text-zinc-600">
+        <h3 class="text-xl font-bold mb-2 text-zinc-50">One More</h3>
+        <p class="text-zinc-200">
        Yep, you guessed it, a third description.
         </p>
       </div>
@@ -85,7 +88,7 @@ permalink: /index.html
 
 
 {# CTA Section #}
-<section class="section bg-primary-700 text-white">
+<section class="section bg-red-800 text-white">
   <div class="container text-center">
     <div class="max-w-2xl mx-auto">
       <h2 class="text-white">Order Now</h2>
