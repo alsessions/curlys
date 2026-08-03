@@ -9,8 +9,6 @@ columns:
         url: /about/
       - label: Menu
         url: /menu/
-      - label: Contact
-        url: /contact/
 
 # Legal links
 legal:

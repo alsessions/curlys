@@ -8,18 +8,18 @@
   --color-black: #030303;
   --color-white: #fffdf7;
 
-  /* Primary: cheese gold */
-  --color-primary-50: #fff9d9;
-  --color-primary-100: #ffef9b;
-  --color-primary-200: #ffe25b;
-  --color-primary-300: #ffd229;
-  --color-primary-400: #ffbf00;
-  --color-primary-500: #f4a800;
-  --color-primary-600: #d98100;
-  --color-primary-700: #aa5c00;
-  --color-primary-800: #7a3e00;
-  --color-primary-900: #4e2500;
-  --color-primary-950: #2d1300;
+  /* Primary: toasted gold */
+  --color-primary-50: #fbf5e6;
+  --color-primary-100: #f2e3bd;
+  --color-primary-200: #e3c980;
+  --color-primary-300: #cfa94e;
+  --color-primary-400: #b9892e;
+  --color-primary-500: #9d6b20;
+  --color-primary-600: #7e5119;
+  --color-primary-700: #603b17;
+  --color-primary-800: #432812;
+  --color-primary-900: #2b190c;
+  --color-primary-950: #180c05;
 
   /* Neutral: charred near-black */
   --color-zinc-50: #fffdf7;

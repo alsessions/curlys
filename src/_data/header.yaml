@@ -6,8 +6,6 @@ navigation:
     url: /about/
   - label: Menu
     url: /menu/
-  - label: Contact
-    url: /contact/
 
 # Call to action button
 cta:

@@ -1,43 +1,270 @@
 ---
+layout: layouts/base.njk
 title: Menu
-description: Philly cheesesteaks, grill favorites, sides, and drinks.
+description: Cheesesteaks, burgers, subs, salads, breakfast, desserts, smoothies, and sides.
 ---
 
-<section>
-  <h2>Cheesesteaks</h2>
-  <ul>
-    <li>Classic Philly Cheesesteak</li>
-    <li>Curly's Cheesesteak</li>
-    <li>Chicken Cheesesteak</li>
-    <li>Pizza Cheesesteak</li>
-  </ul>
-</section>
+{% set menuSections = [
+  {
+    title: "Hot Sandwiches",
+    note: "With fries",
+    accent: "red",
+    items: [
+      { name: "Philly Cheesesteak", price: "$11.99" },
+      { name: "Chicken Cheesesteak", price: "$11.99" },
+      { name: "Grilled Pastrami", price: "$14.29" },
+      { name: "Roast Beef", price: "$11.99" },
+      { name: "Grilled Chicken", meta: "Regular or spicy", price: "$11.99" },
+      { name: "Tuna / Tuna Melt", price: "$11.99" },
+      { name: "Curly Special Wrap", price: "$14.29" },
+      { name: "Curly Double Burger", meta: "Grilled chicken, French fries, lettuce, sauce", price: "$11.99" }
+    ]
+  },
+  {
+    title: "Cold Cut Subs",
+    note: "All subs served on fresh bread with lettuce, tomato, onion, and oil",
+    columns: ["6 in", "12 in"],
+    items: [
+      { name: "Turkey", price: "$8.59", price2: "$10.79" },
+      { name: "Honey Turkey", price: "$8.59", price2: "$10.79" },
+      { name: "Pastrami", price: "$8.59", price2: "$10.79" },
+      { name: "Turkey Ham", price: "$8.59", price2: "$10.79" },
+      { name: "Roast Beef", price: "$8.59", price2: "$10.79" },
+      { name: "Salami", price: "$8.59", price2: "$10.79" },
+      { name: "Mixed Meat", price: "$10.79", price2: "$14.39" },
+      { name: "Salsalito Turkey", price: "$10.79", price2: "$14.39" },
+      { name: "Beef Salami", price: "$10.79", price2: "$13.19" }
+    ]
+  },
+  {
+    title: "Burgers",
+    note: "With fries",
+    items: [
+      { name: "Cheeseburger", price: "$9.99" },
+      { name: "Bacon Cheeseburger", price: "$12.79" },
+      { name: "Italian Burger", price: "$11.79" },
+      { name: "BBQ Chicken", price: "$11.79" },
+      { name: "Chicken Philly Cheese Steak", price: "$11.99" }
+    ]
+  },
+  {
+    title: "Sides & Appetizers",
+    items: [
+      { name: "French Fries", price: "$3.99" },
+      { name: "Onion Rings", price: "$4.49" },
+      { name: "5 Wings", price: "$7.99" },
+      { name: "10 Wings", price: "$14.99" },
+      { name: "5 Tenders", price: "$7.99" },
+      { name: "5 Tenders w/ Fries", price: "$9.99" },
+      { name: "5 Mozzarella Sticks", price: "$7.99" },
+      { name: "Waffle Fries", price: "$4.49" }
+    ]
+  },
+  {
+    title: "Combination Sandwiches",
+    note: "Add bacon or cheese $1.50",
+    items: [
+      { name: "Chopped Cheese", price: "$9.49" },
+      { name: "The New Yorker", price: "$9.49" },
+      { name: "The Big Zick", price: "$9.49" },
+      { name: "The Half Pounder", price: "$9.49" },
+      { name: "Chicken Bomber", price: "$9.49" },
+      { name: "Downtown", price: "$9.49" }
+    ]
+  },
+  {
+    title: "Wraps",
+    items: [
+      { name: "Hot Arizona", price: "$8.95" },
+      { name: "Cali Club", price: "$8.95" },
+      { name: "Vegetarian", price: "$8.95" },
+      { name: "Southwest BBQ", price: "$8.95" },
+      { name: "Spicy Turkey Mozz.", price: "$8.95" },
+      { name: "Chicken Gyro", price: "$8.95" },
+      { name: "Lamb Gyro", price: "$8.95" }
+    ]
+  },
+  {
+    title: "Gourmet Salads",
+    items: [
+      { name: "Tuna Fish Salad", meta: "Tender tuna blended with mayo, celery, and a touch of relish.", price: "$9.99" },
+      { name: "Seafood Salad", meta: "Seafood with crisp veggies in a creamy signature dressing.", price: "$11.99" },
+      { name: "Garden Salad", meta: "Fresh lettuce, tomatoes, cucumbers, onions, and mixed crisp veggies.", price: "$9.99" },
+      { name: "Greek Salad", meta: "Crisp veggies, olives, feta cheese, and Mediterranean flavor.", price: "$9.99" },
+      { name: "Macaroni Salad", meta: "Elbow pasta with crunchy veggies in a creamy, savory dressing.", price: "$9.99" },
+      { name: "Pasta Salad", meta: "Rotini pasta with fresh veggies and zesty dressing.", price: "$9.99" },
+      { name: "Fruit Salad", meta: "A sweet blend of fresh seasonal fruits.", price: "$10.99" }
+    ]
+  },
+  {
+    title: "Breakfast Platters",
+    note: "Served with home fries and toast",
+    items: [
+      { name: "2 Eggs", meta: "Any style", price: "$5.99" },
+      { name: "Western Omelette", price: "$7.49" },
+      { name: "Spinach Omelette", price: "$8.99" },
+      { name: "Avocado Omelette", price: "$8.99" },
+      { name: "Cheese Omelette", price: "$6.99" },
+      { name: "Three Buttermilk Pancakes", price: "$5.99" },
+      { name: "Pancakes with Fruit", meta: "2 pancakes", price: "$6.99" },
+      { name: "Protein Pancakes", price: "$8.99" },
+      { name: "French Toast", meta: "Two slices of grilled French toast", price: "$3.99" }
+    ]
+  },
+  {
+    title: "Desserts",
+    items: [
+      { name: "Dubai Chocolate Cup", meta: "Chocolate, pistachio cream, strawberries, and crispy kataifi.", price: "$14.99" },
+      { name: "Chocolate Cake", price: "$4.99" },
+      { name: "Cheese Cake", price: "$4.99" },
+      { name: "Red Velvet Cake", price: "$4.99" },
+      { name: "Tiramisu", price: "$4.99" },
+      { name: "Oreo Cake", price: "$4.99" },
+      { name: "Rainbow Cake", price: "$4.99" }
+    ]
+  },
+  {
+    title: "Smoothies",
+    columns: ["Small", "Large"],
+    items: [
+      { name: "Blueberry Banana Cranberry", price: "$6.39", price2: "$6.99" },
+      { name: "Strawberry Banana", price: "$6.39", price2: "$6.99" },
+      { name: "Mango Strawberry", price: "$6.39", price2: "$6.99" },
+      { name: "Pineapple", price: "$6.39", price2: "$6.99" },
+      { name: "Power Green", price: "$6.39", price2: "$6.99" },
+      { name: "Mango Madness", price: "$6.39", price2: "$6.99" }
+    ]
+  },
+  {
+    title: "Milkshakes",
+    columns: ["Small", "Large"],
+    items: [
+      { name: "Vanilla", price: "$6.39", price2: "$6.99" },
+      { name: "Chocolate", price: "$6.39", price2: "$6.99" },
+      { name: "Peanut Butter", price: "$6.39", price2: "$6.99" },
+      { name: "Oreo", price: "$6.39", price2: "$6.99" },
+      { name: "Mint", price: "$6.39", price2: "$6.99" },
+      { name: "Coffee", price: "$6.39", price2: "$6.99" },
+      { name: "Banana", price: "$6.39", price2: "$6.99" }
+    ]
+  }
+] %}
 
-<section>
-  <h2>From the Grill</h2>
-  <ul>
-    <li>Hamburger</li>
-    <li>Cheeseburger</li>
-    <li>Grilled Chicken Sandwich</li>
-    <li>Hot Dog</li>
-  </ul>
-</section>
+{% set coldCuts = [
+  { name: "Pastrami", price: "$14.29" },
+  { name: "Turkey Ham", price: "$11.99" },
+  { name: "Roast Beef", price: "$13.99" },
+  { name: "Turkey", price: "$11.99" },
+  { name: "Honey Turkey", price: "$11.99" },
+  { name: "Buffalo Chicken", price: "$11.99" }
+] %}
 
-<section>
-  <h2>Sides</h2>
-  <ul>
-    <li>French Fries</li>
-    <li>Cheese Fries</li>
-    <li>Onion Rings</li>
-    <li>Mozzarella Sticks</li>
-  </ul>
-</section>
+{% set cheeses = ["Provolone", "Swiss", "White American", "Yellow American Cheese", "Pepper Jack", "Mozzarella"] %}
 
-<section>
-  <h2>Drinks</h2>
-  <ul>
-    <li>Fountain Soda</li>
-    <li>Bottled Water</li>
-    <li>Iced Tea</li>
-  </ul>
-</section>
+<article class="bg-zinc-950">
+  <header class="relative overflow-hidden border-b border-red-800/50">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(242,27,18,0.22),_transparent_34%),linear-gradient(135deg,_rgba(251,122,11,0.18),_transparent_40%)]"></div>
+    <div class="container relative max-w-7xl py-16 md:py-20">
+      <p class="mb-3 text-sm font-bold uppercase tracking-wider text-primary-300">Curly's Cheesesteaks and Grill</p>
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-end">
+        <div>
+          <h1 class="max-w-4xl text-balance text-zinc-50">Menu</h1>
+          <p class="mt-5 max-w-2xl text-lg font-medium text-zinc-100 md:text-xl">
+            Fresh, homemade, and stacked for a real grill appetite.
+          </p>
+        </div>
+        <div class="border border-red-700/70 bg-zinc-900/80 p-5 shadow-lg shadow-red-950/30">
+          <p class="text-sm font-bold uppercase tracking-wide text-pink-300">Delivery Available</p>
+          <p class="mt-2 text-3xl font-extrabold text-red-400">8:00AM - 12:00AM</p>
+          <p class="mt-4 text-zinc-100">400 N James St, Rome NY 13440</p>
+          <p class="mt-3 text-2xl font-extrabold text-primary-300">315-617-8375</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container max-w-7xl py-12 md:py-16">
+    <div class="grid gap-6 lg:grid-cols-3">
+      {% for section in menuSections %}
+        <section class="border border-red-800/70 bg-zinc-900/80 p-5 shadow-lg shadow-zinc-950/40 {% if section.title == 'Hot Sandwiches' or section.title == 'Cold Cut Subs' %}lg:col-span-1{% endif %}">
+          <div class="mb-5">
+            <div class="inline-flex min-w-56 items-center justify-center bg-pink-700 px-5 py-2 text-center shadow-md shadow-pink-950/50">
+              <h2 class="text-xl font-extrabold uppercase tracking-wide text-zinc-50 md:text-2xl">{{ section.title }}</h2>
+            </div>
+            {% if section.note %}
+              <p class="mt-2 text-sm font-semibold uppercase tracking-wide text-red-300">{{ section.note }}</p>
+            {% endif %}
+          </div>
+
+          {% if section.columns %}
+            <div class="mb-2 grid grid-cols-[minmax(0,1fr)_4rem_4rem] gap-3 text-right text-xs font-bold uppercase tracking-wide text-primary-300">
+              <span></span>
+              <span>{{ section.columns[0] }}</span>
+              <span>{{ section.columns[1] }}</span>
+            </div>
+          {% endif %}
+
+          <ul class="space-y-3">
+            {% for item in section.items %}
+              <li class="grid gap-x-3 {% if section.columns %}grid-cols-[minmax(0,1fr)_4rem_4rem]{% else %}grid-cols-[minmax(0,1fr)_auto]{% endif %}">
+                <div class="min-w-0">
+                  <div class="flex items-baseline gap-2">
+                    <span class="h-2 w-2 shrink-0 rounded-full bg-red-500"></span>
+                    <span class="min-w-0 text-base font-extrabold uppercase tracking-wide text-zinc-50 break-words leading-snug">{{ item.name }}</span>
+                    <span class="min-w-8 flex-1 border-b border-dotted border-zinc-500"></span>
+                  </div>
+                  {% if item.meta %}
+                    <p class="mt-1 pl-4 text-sm leading-snug text-zinc-300">{{ item.meta }}</p>
+                  {% endif %}
+                </div>
+                <span class="text-right text-base font-extrabold text-zinc-50">{{ item.price }}</span>
+                {% if section.columns %}
+                  <span class="text-right text-base font-extrabold text-zinc-50">{{ item.price2 }}</span>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endfor %}
+
+      <section class="border border-red-800/70 bg-zinc-900/80 p-5 shadow-lg shadow-zinc-950/40 lg:col-span-2">
+        <div class="mb-5 grid gap-4 md:grid-cols-[minmax(0,1fr)_18rem] md:items-start">
+          <div>
+            <div class="inline-flex min-w-56 items-center justify-center bg-pink-700 px-5 py-2 text-center shadow-md shadow-pink-950/50">
+              <h2 class="text-xl font-extrabold uppercase tracking-wide text-zinc-50 md:text-2xl">Cold Cuts</h2>
+            </div>
+            <p class="mt-2 text-sm font-semibold uppercase tracking-wide text-red-300">Priced per lb</p>
+          </div>
+          <div class="md:text-right">
+            <h3 class="text-2xl font-extrabold text-red-400">Cheese Selection</h3>
+            <p class="mt-1 text-sm font-bold uppercase tracking-wide text-red-300">Priced per lb</p>
+            <p class="mt-1 text-3xl font-extrabold leading-none text-primary-300">$11.99</p>
+          </div>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2">
+          <ul class="space-y-3">
+            {% for item in coldCuts %}
+              <li class="grid grid-cols-[minmax(0,1fr)_auto] gap-3">
+                <div class="flex items-baseline gap-2">
+                  <span class="h-2 w-2 shrink-0 rounded-full bg-red-500"></span>
+                  <span class="min-w-0 text-base font-extrabold uppercase tracking-wide text-zinc-50 break-words leading-snug">{{ item.name }}</span>
+                  <span class="min-w-8 flex-1 border-b border-dotted border-zinc-500"></span>
+                </div>
+                <span class="text-right text-base font-extrabold text-zinc-50">{{ item.price }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+          <ul class="grid content-start gap-x-8 gap-y-3 sm:grid-cols-2 md:pt-1">
+            {% for cheese in cheeses %}
+              <li class="flex items-center gap-2 text-base font-semibold text-zinc-100">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-red-500"></span>
+                {{ cheese }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</article>
