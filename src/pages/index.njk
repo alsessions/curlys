@@ -41,44 +41,39 @@ permalink: /index.html
 <section class="section bg-zinc-950">
   <div class="container">
     <div class="text-center max-w-2xl mx-auto mb-12">
-      <h2 class="text-zinc-50">Specials</h2>
+      <h2 class="text-zinc-50">Quick Info</h2>
       <p class="mt-4 text-lg text-zinc-200">
-        Daily and weekly specials.
+        Everything you need to get fed fast.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {# Special 1 #}
-      <div class="card">
-  
-        <h3 class="text-xl font-bold mb-2 text-zinc-50">Something</h3>
+      <div class="card p-6">
+        <p class="mb-3 text-sm font-bold uppercase tracking-wide text-primary-300">Call Ahead</p>
+        <h3 class="text-xl font-bold mb-2 text-zinc-50">Pickup Orders</h3>
         <p class="text-zinc-200">
-          A descrption of something.
+          Give us a call and we will get your cheesesteaks, burgers, fries, and sides started.
         </p>
+        <a href="tel:+13156178375" class="mt-5 inline-block text-2xl font-extrabold text-primary-300 no-underline hover:text-primary-200">315-617-8375</a>
       </div>
 
-      {# Feature 2 #}
-      <div class="card">
-
-        <h3 class="text-xl font-bold mb-2 text-zinc-50">Something Else</h3>
+      <div class="card p-6">
+        <p class="mb-3 text-sm font-bold uppercase tracking-wide text-primary-300">Delivery</p>
+        <h3 class="text-xl font-bold mb-2 text-zinc-50">Delivery Available</h3>
         <p class="text-zinc-200">
-          A description of something else.
+          Order through local delivery partners when you want Curly's brought straight to you.
         </p>
+        <p class="mt-5 text-lg font-extrabold uppercase tracking-wide text-red-300">8:00AM - 12:00AM</p>
       </div>
 
-      {# Feature 3 #}
-      <div class="card">
-       
-        <h3 class="text-xl font-bold mb-2 text-zinc-50">One More</h3>
+      <div class="card p-6">
+        <p class="mb-3 text-sm font-bold uppercase tracking-wide text-primary-300">Rome, NY</p>
+        <h3 class="text-xl font-bold mb-2 text-zinc-50">Find Us</h3>
         <p class="text-zinc-200">
-       Yep, you guessed it, a third description.
+          Stop in for cheesesteaks, breakfast platters, smoothies, desserts, and hot grill favorites.
         </p>
+        <p class="mt-5 text-lg font-extrabold text-zinc-50">400 N James St<br>Rome, NY 13440</p>
       </div>
-
-
-
-
-
     </div>
   </div>
 </section>
@@ -87,20 +82,16 @@ permalink: /index.html
 
 
 
-{# CTA Section #}
-<section class="section bg-red-800 text-white my-20">
-  <div class="container text-center">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="text-white">Order Now</h2>
+{# Map Section #}
+<section class="bg-zinc-950">
 
-      <div class="flex flex-wrap justify-center gap-4 mt-8">
-        {{ button({
-          text: "View Menu",
-          url: "/menu/",
-          variant: "white",
-          size: "lg"
-        }) }}
-      </div>
-    </div>
+  <div class="h-[26rem] w-full border-y border-red-800/70 md:h-[34rem]">
+    <iframe
+      src="https://www.google.com/maps?q=400%20N%20James%20St%2C%20Rome%2C%20NY%2013440&output=embed"
+      title="Google map showing Curly's Cheesesteaks and Grill at 400 N James St, Rome, NY 13440"
+      class="h-full w-full"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
   </div>
 </section>

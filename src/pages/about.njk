@@ -1,68 +1,91 @@
 ---
+layout: layouts/base.njk
 title: About
 description: Visit Curly's Cheesesteaks and Grill in Rome, NY, or call ahead for pickup.
 ---
 {% from "_components/index.njk" import button %}
 
-<div class="not-prose grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem]">
-  <section class="border border-red-800/70 bg-zinc-900/80 p-6 shadow-lg shadow-zinc-950/40">
-    <p class="text-sm font-bold uppercase tracking-wide text-primary-300">Come hungry, leave happy</p>
-    <h2 class="mt-3 text-3xl font-extrabold text-zinc-50">Curly's Cheesesteaks and Grill</h2>
-    <p class="mt-4 max-w-2xl text-lg text-zinc-100">
-      Fresh cheesesteaks, burgers, fries, smoothies, breakfast platters, desserts, and sides in Rome, NY.
-    </p>
-
-    <div class="mt-8 grid gap-4 sm:grid-cols-2">
-      <div class="border border-red-800/60 bg-zinc-950/70 p-5">
-        <h3 class="text-lg font-extrabold uppercase tracking-wide text-red-300">Address</h3>
-        <p class="mt-3 text-zinc-100">400 N James St<br>Rome, NY 13440</p>
-      </div>
-
-      <div class="border border-red-800/60 bg-zinc-950/70 p-5">
-        <h3 class="text-lg font-extrabold uppercase tracking-wide text-red-300">Call Ahead</h3>
-        <a href="tel:+13156178375" class="mt-3 block text-2xl font-extrabold text-primary-300 no-underline hover:text-primary-200">
-          315-617-8375
-        </a>
-      </div>
-
-      <div class="border border-red-800/60 bg-zinc-950/70 p-5">
-        <h3 class="text-lg font-extrabold uppercase tracking-wide text-red-300">Hours</h3>
-        <p class="mt-3 text-2xl font-extrabold text-zinc-50">8:00AM - 12:00AM</p>
-      </div>
-
-      <div class="border border-red-800/60 bg-zinc-950/70 p-5">
-        <h3 class="text-lg font-extrabold uppercase tracking-wide text-red-300">Delivery</h3>
-        <p class="mt-3 text-zinc-100">Available through local delivery partners.</p>
+<article class="bg-zinc-950">
+  <header class="relative overflow-hidden border-b border-red-800/50">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(242,27,18,0.22),_transparent_34%),linear-gradient(135deg,_rgba(251,122,11,0.18),_transparent_40%)]"></div>
+    <div class="container relative flex min-h-[18rem] max-w-7xl flex-col justify-center py-12 md:min-h-[20rem] md:py-14">
+      <p class="mb-3 text-sm font-bold uppercase tracking-wider text-primary-300">Curly's Cheesesteaks and Grill</p>
+      <div class="grid w-full gap-8 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-end">
+        <div>
+          <h1 class="max-w-4xl text-balance text-zinc-50">About Curly's</h1>
+          <p class="mt-5 max-w-2xl text-lg font-medium text-zinc-100 md:text-xl">
+            Fresh, homemade, and stacked for a real grill appetite.
+          </p>
+        </div>
+        <div class="border border-red-700/70 bg-zinc-900/80 p-5 shadow-lg shadow-red-950/30">
+          <p class="text-sm font-bold uppercase tracking-wide text-pink-300">Delivery Available</p>
+          <p class="mt-2 text-3xl font-extrabold text-red-400">8:00AM - 12:00AM</p>
+          <p class="mt-4 text-zinc-100">400 N James St, Rome NY 13440</p>
+          <p class="mt-3 text-2xl font-extrabold text-primary-300">315-617-8375</p>
+        </div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <aside class="border border-red-800/70 bg-zinc-900/80 p-6 shadow-lg shadow-zinc-950/40">
-    <h2 class="text-2xl font-extrabold text-zinc-50">Order Info</h2>
-    <div class="mt-5 space-y-5">
-      <div>
-        <p class="text-sm font-bold uppercase tracking-wide text-red-300">Phone</p>
-        <a href="tel:+13156178375" class="mt-1 block text-xl font-extrabold text-primary-300 no-underline hover:text-primary-200">
-          315-617-8375
-        </a>
-      </div>
-      <div>
-        <p class="text-sm font-bold uppercase tracking-wide text-red-300">Pickup</p>
-        <p class="mt-1 text-zinc-100">Call ahead and we will get it started.</p>
-      </div>
-      <div>
-        <p class="text-sm font-bold uppercase tracking-wide text-red-300">Menu</p>
-        <p class="mt-1 text-zinc-100">Cheesesteaks, grill favorites, salads, smoothies, and desserts.</p>
-      </div>
-    </div>
+  <div class="container max-w-7xl py-12 md:py-16">
+    <div class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem]">
+      <section class="border border-red-800/70 bg-zinc-900/80 p-6 shadow-lg shadow-zinc-950/40">
+        <p class="text-sm font-bold uppercase tracking-wide text-primary-300">Curly's Cheesesteaks and Grill</p>
+        <h2 class="mt-3 text-3xl font-extrabold text-zinc-50">Visit or Call Ahead</h2>
 
-    <div class="mt-8">
-      {{ button({
-        text: "View Menu",
-        url: "/menu/",
-        variant: "primary",
-        full: true
-      }) }}
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <div class="border border-red-800/60 bg-zinc-950/70 p-5">
+            <h3 class="text-lg font-extrabold uppercase tracking-wide text-red-300">Address</h3>
+            <p class="mt-3 text-zinc-100">400 N James St<br>Rome, NY 13440</p>
+          </div>
+
+          <div class="border border-red-800/60 bg-zinc-950/70 p-5">
+            <h3 class="text-lg font-extrabold uppercase tracking-wide text-red-300">Call Ahead</h3>
+            <a href="tel:+13156178375" class="mt-3 block text-2xl font-extrabold text-primary-300 no-underline hover:text-primary-200">
+              315-617-8375
+            </a>
+          </div>
+
+          <div class="border border-red-800/60 bg-zinc-950/70 p-5">
+            <h3 class="text-lg font-extrabold uppercase tracking-wide text-red-300">Hours</h3>
+            <p class="mt-3 text-2xl font-extrabold text-zinc-50">8:00AM - 12:00AM</p>
+          </div>
+
+          <div class="border border-red-800/60 bg-zinc-950/70 p-5">
+            <h3 class="text-lg font-extrabold uppercase tracking-wide text-red-300">Delivery</h3>
+            <p class="mt-3 text-zinc-100">Available through local delivery partners.</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="border border-red-800/70 bg-zinc-900/80 p-6 shadow-lg shadow-zinc-950/40">
+        <h2 class="text-2xl font-extrabold text-zinc-50">Order Info</h2>
+        <div class="mt-5 space-y-5">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-wide text-red-300">Phone</p>
+            <a href="tel:+13156178375" class="mt-1 block text-xl font-extrabold text-primary-300 no-underline hover:text-primary-200">
+              315-617-8375
+            </a>
+          </div>
+          <div>
+            <p class="text-sm font-bold uppercase tracking-wide text-red-300">Pickup</p>
+            <p class="mt-1 text-zinc-100">Call ahead and we will get it started.</p>
+          </div>
+          <div>
+            <p class="text-sm font-bold uppercase tracking-wide text-red-300">Menu</p>
+            <p class="mt-1 text-zinc-100">Cheesesteaks, grill favorites, salads, smoothies, and desserts.</p>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          {{ button({
+            text: "View Menu",
+            url: "/menu/",
+            variant: "primary",
+            full: true
+          }) }}
+        </div>
+      </aside>
     </div>
-  </aside>
-</div>
+  </div>
+</article>
